@@ -1,21 +1,24 @@
 function hasTargetSum(nums, target) {
-  // Write your algorithm here
-  const Numbers = new Set();
-  for(const num of nums){
-    const complement=target-num;
-    if (Numbers.has(complement)){
-      return true;
-    }
-    Numbers.add(num);{
-      return false;
-    }
-    const numbers=[4,65,78,98,12,3,45,8,1,]
-    const targetSum=77;
-    const result=hasTargetSum(numbers,targetSum);
-    console.log(result)
+  const Numbers =  new Set();
 
+  for (const num of nums) {
+      const complement = target-num;
+if (Numbers.has(complement)) {
+          return true;
+      }
+
+      Numbers.add(num);
   }
+
+  return false;
 }
+
+// Example usage:
+const numbers = [3,9,34,8 ,56, 4,6,54,43];
+const targetSum = 77;
+
+const result = hasTargetSum(numbers, targetSum);
+console.log(result)
 
 /* 
   Write the Big O time complexity of your function here
