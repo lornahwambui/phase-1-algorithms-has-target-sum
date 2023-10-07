@@ -1,5 +1,20 @@
-function hasTargetSum(array, target) {
+function hasTargetSum(nums, target) {
   // Write your algorithm here
+  const Numbers = new Set();
+  for(const num of nums){
+    const complement=target-num;
+    if (Numbers.has(complement)){
+      return true;
+    }
+    Numbers.add(num);{
+      return false;
+    }
+    const numbers=[4,65,78,98,12,3,45,8,1,]
+    const targetSum=77;
+    const result=hasTargetSum(numbers,targetSum);
+    console.log(result)
+
+  }
 }
 
 /* 
